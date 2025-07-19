@@ -26,7 +26,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop navigation links */}
-          <ul className="hidden md:flex space-x-6 text-lg font-medium text-gray-300">
+          <ul className="hidden md:flex space-x-6 text-lg underline font-medium text-gray-300">
             <li>
               <Link to="/" className="hover:text-white">
                 Home
@@ -52,7 +52,7 @@ export default function Navbar() {
 
         {/* Right side: Shop link aligned to edge */}
         <div className="text-sm font-medium text-gray-300">
-          <Link to="/shop" className="hover:text-white text-lg">
+          <Link to="/shop" className="hover:text-white text-lg underline">
             Shop
           </Link>
         </div>

@@ -26,6 +26,36 @@ export default function AboutTheBook() {
       rating: 5,
       text: "It is one thing to know about God. It is another matter entirely to know God. Terry's book is a journey of what it is to come to know God deeply and personally, and to live that out in every aspect of life on this earth. After all, life on this earth should lead us to life with God in the Kingdom.",
     },
+    {
+      name: "Addiction Recovery - Scott",
+      rating: 5,
+      text: "If you think your life doesn't matter, God has a plan to deliver you hope, happiness and confidence. I recommend that you take the IMPERFECT HAPPINESS 30 day challenge - reading one chapter daily for thirty days. A great gift for someone struggling with life's circumstances!",
+    },
+    {
+      name: "Corporate Executive - John",
+      rating: 5,
+      text: "IMPERFECT HAPPINESS is an entertaining and enlightening read that provides excellent insights and suggestions on how to handle the many issues life throws our way. Terry describes this journey in a clear and relatable manner. The tools and techniques Terry uses to view his setbacks in a positive and optimistic manner can be applied to anyone's unique life circumstances.",
+    },
+    {
+      name: "New Christian - Brandon",
+      rating: 5,
+      text: "In a world filled with trouble, the IMPERFECT HAPPINESS platform of Prayer, Scripture, Values of Jesus and Music is the perfect way to begin my Christian journey. Showing how mistakes, failure and pain can lead us to Jesus is so beneficial.",
+    },
+    {
+      name: "Cancer Patient - Rick",
+      rating: 5,
+      text: "IMPERFECT HAPPINESS is a riveting portrayal of the uncertainty of cancer particularly the emotional turmoil and continuous mind games. Great advice to build strength despite health care system and treatment challenges, while highlighting ways to stay attitude positive as you begin to build an entirely new life.",
+    },
+    {
+      name: "Manager - Ashley",
+      rating: 5,
+      text: "The author's captivating approach of introducing an adventure story element or life challenge supported by Scripture, Traits and Values of Jesus, and Christian Music can help anyone live life well with God and His word.",
+    },
+    {
+      name: "Business Leader - Scott",
+      rating: 5,
+      text: "IMPERFECT HAPPINESS is a truly inspirational memoir which makes common sense and relationships, more common.",
+    },
   ]);
 
   const [form, setForm] = useState({ name: "", rating: 5, text: "" });

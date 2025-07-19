@@ -4,20 +4,33 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 body {
-  @apply font-sans bg-gradient-to-br from-gray-200 via-gray-300 to-blue-400 min-h-screen relative overflow-x-hidden;
+  @apply min-h-screen relative overflow-x-hidden;
+  background: linear-gradient(to bottom right, #ffffff, #f7f7f7, #ffffff);
   font-family: 'Poppins', sans-serif;
 }
 
+/* Glossy container wrapper style */
+.glossy-container {
+  @apply max-w-7xl w-full bg-white/40 backdrop-blur-md border border-white/50 rounded-3xl shadow-lg p-8 mx-auto;
+}
 
+/* Glossy navbar style */
+.glossy-navbar {
+  @apply bg-white/30 backdrop-blur-md border-b border-white/50 shadow-md px-6 py-4;
+}
 
+/* Glossy buttons */
+.glossy-button {
+  @apply bg-white/50 backdrop-blur-sm border border-white/50 text-gray-900 font-semibold px-5 py-2 rounded-xl shadow-md hover:bg-white/70 transition duration-300;
+}
 
+/* Glossy cards */
+.glossy-card {
+  @apply bg-white/40 backdrop-blur-md border border-white/50 rounded-2xl shadow-lg overflow-hidden;
+}
 
- /* body { 
-    font-family: "Poppins", sans-serif;
-    background-color: #CBBD93;
-    
-}  */
-
+/* Glossy text color */
+.glossy-text {
+  @apply text-gray-900;
+}

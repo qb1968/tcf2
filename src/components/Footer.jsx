@@ -13,7 +13,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} All rights reserved.
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-300">
+        <div className="flex flex-wrap justify-center gap-6 text-md font-medium text-gray-300">
           <a href="/" className="hover:text-white transition">
             Home
           </a>
