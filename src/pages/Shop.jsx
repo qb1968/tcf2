@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const products = [
   {
@@ -25,6 +25,27 @@ const products = [
 ];
 
 export default function Shop() {
+  const [selections, setSelections] = useState({});
+
+  const handleSelectChange = (id, field, value) => {
+    setSelections((prev) => ({
+      ...prev,
+      [id]: {
+        ...prev[id],
+        [field]: value,
+      },
+    }));
+  };
+
+  const handleBuy = (product) => {
+    const selected = selections[product.id] || {};
+    alert(
+      `Buying ${product.name}\nSize: ${selected.size || "M"}\nQuantity: ${
+        selected.quantity || 1
+      }`
+    );
+  };
+
   return (
     <section className="min-h-screen bg-gray-100 py-16 px-6 font-custom">
       <div className="max-w-6xl mx-auto">
@@ -50,12 +71,41 @@ export default function Shop() {
                 <h2 className="text-lg font-semibold text-gray-900">
                   {product.name}
                 </h2>
-                <p className="text-blue-600 font-bold mt-2 mb-4">
+                <p className="text-blue-600 font-bold mt-2 mb-2">
                   ${product.price.toFixed(2)}
                 </p>
 
+                <div className="flex gap-2 mb-4">
+                  <select
+                    className="border rounded px-2 py-1 text-sm"
+                    value={selections[product.id]?.size || "M"}
+                    onChange={(e) =>
+                      handleSelectChange(product.id, "size", e.target.value)
+                    }
+                  >
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                  </select>
+
+                  <select
+                    className="border rounded px-2 py-1 text-sm"
+                    value={selections[product.id]?.quantity || 1}
+                    onChange={(e) =>
+                      handleSelectChange(product.id, "quantity", e.target.value)
+                    }
+                  >
+                    {[1, 2, 3, 4, 5].map((q) => (
+                      <option key={q} value={q}>
+                        {q}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
                 <button
-                  onClick={() => alert(`Buying ${product.name}`)}
+                  onClick={() => handleBuy(product)}
                   className="mt-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300"
                 >
                   Buy
