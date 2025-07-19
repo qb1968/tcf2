@@ -14,18 +14,18 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-6 text-md font-medium text-gray-300">
-          <a href="/" className="hover:text-white transition">
+          <Link to="/" className="hover:text-white transition">
             Home
-          </a>
-          <a href="/about" className="hover:text-white transition">
+          </Link>
+          <Link to="/about" className="hover:text-white transition">
             Author
-          </a>
-          <a href="/book" className="hover:text-white transition">
+          </Link>
+          <Link to="/book" className="hover:text-white transition">
             About The Book
-          </a>
-          <a href="/contact" className="hover:text-white transition">
+          </Link>
+          <Link to="/contact" className="hover:text-white transition">
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
