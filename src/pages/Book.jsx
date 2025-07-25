@@ -99,6 +99,13 @@ export default function AboutTheBook() {
               Christian Faith Publishing
             </Link>
           </h2>
+          <h2 className="text-blue-400 font-semibold mt-4 text-center hover:underline">
+            ISBN 979-8-89637-587-6
+          </h2>
+          <h2 className="text-blue-400 font-semibold mt-4 text-center hover:underline">
+            Inspirational, Christian Living, Family, Personal Growth, Prayer,
+            Bible Study
+          </h2>
         </div>
 
         <div>
@@ -147,25 +154,37 @@ export default function AboutTheBook() {
                   Music.
                 </p>
                 <p>
-                  <span className="font-bold">IMPƎRFƎCT HAPPINESS</span> offers a 
-                  Thirty-Day Devotional Challenge to help readers Pause & Reflect on what
-                  truly matters in their own life.
+                  <span className="font-bold">IMPƎRFƎCT HAPPINESS</span> offers
+                  a Thirty-Day Devotional Challenge to help readers Pause &
+                  Reflect on what truly matters in their own life.
                 </p>
                 <p>
-                  The term "Imperfect Happiness" represents life for most of us in our search for belonging, hope, purpose, happiness, and contentment. The author's journey of expanding his own level of Godly Wisdom 
-                  <span className="italic">-our increased understanding of who God is and what he wants</span> is the primary theme of the book. The author demonstrates, through the mountains and valleys of his life's "Imperfect Happiness" that most things we want in life are better after realizing Godly Wisdom.
+                  The term "Imperfect Happiness" represents life for most of us
+                  in our search for belonging, hope, purpose, happiness, and
+                  contentment. The author's journey of expanding his own level
+                  of Godly Wisdom
+                  <span className="italic">
+                    -our increased understanding of who God is and what he wants
+                  </span>{" "}
+                  is the primary theme of the book. The author demonstrates,
+                  through the mountains and valleys of his life's "Imperfect
+                  Happiness" that most things we want in life are better after
+                  realizing Godly Wisdom.
                 </p>
                 <p>The book can be read multiple ways including:</p>
                 <ul className="list-disc list-inside pl-4 space-y-1 text-gray-300">
                   <li>Thirty Bible Studies and a Glossary of Terms</li>
                   <li>
-                    Life challenges by topic with supportive Music and Scripture in 18 translations
+                    Life challenges by topic with supportive Music and Scripture
+                    in 18 translations
                   </li>
                   <li>
-                    Thirty-one authentic, bold prayers by common life experiences
+                    Thirty-one authentic, bold prayers by common life
+                    experiences
                   </li>
                   <li>
-                    Ninety-eight Christian Songs highlighting The Bible and the Life of Jesus.
+                    Ninety-eight Christian Songs highlighting The Bible and the
+                    Life of Jesus.
                   </li>
                 </ul>
                 <button
@@ -195,7 +214,7 @@ export default function AboutTheBook() {
       {/* Reviews Section */}
       <div className="mt-24">
         <h3 className="text-3xl font-bold text-center mb-10 text-gray-100">
-          What Readers Are Saying
+          What Readers are Saying
         </h3>
         <Swiper
           modules={[Navigation, Pagination, A11y]}

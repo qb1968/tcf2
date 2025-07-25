@@ -53,9 +53,8 @@ export default function Contact() {
           <h2 className="text-3xl font-extrabold text-gray-900 mb-2">
             Contact Us
           </h2>
-          <p className="text-gray-600">
-            We’d love to hear from you. Fill out the form below.
-          </p>
+          <p className="text-gray-600 font-bold">
+            Personal Requests          </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -104,7 +103,7 @@ export default function Contact() {
               <option value="Index">Index by Subject & Page</option>
               <option value="Prayer Request">Prayer Request</option>
               <option value="Speaking Engagement">Speaking Engagement</option>
-              <option value="Testimonial">Testimonial</option>
+              <option value="Testimonial">Share Positive Story</option>
             </select>
           </div>
 

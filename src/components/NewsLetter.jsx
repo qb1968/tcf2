@@ -37,10 +37,12 @@ const NewsletterSubscription = () => {
       <div className="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
         <div className="text-center mb-6">
           <h2 className="text-3xl font-extrabold text-gray-900">
-            Join Our Book Club
+            Join our Book Club
           </h2>
-          <p className="text-gray-600 mt-2">
-            Get Connected, Receive IMPƎRFƎCT HAPPINESS Platform Updates, Learn about Our Special Needs Community Donations, and Special Offers.
+          <p className="text-gray-600 mt-2 font-bold">
+            Get Connected, Receive IMPƎRFƎCT HAPPINESS Platform Updates, Learn
+            about Donations to the Special Needs Community and our Special
+            Offers.
           </p>
         </div>
         <AnimatePresence>

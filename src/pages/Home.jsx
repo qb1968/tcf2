@@ -28,20 +28,17 @@ export default function Home() {
       <div className="px-6 pb-20">
         <ImageContainer />
       </div>
-      
 
       <div className="px-6 pb-24">
         <UpcomingEventsCarousel />
       </div>
-{/* Current Promotions Section */}
+      {/* Current Promotions Section */}
       <section className="bg-gradient-to-b from-blue-50 via-white to-blue-100 py-12 px-6 rounded-3xl shadow-inner max-w-6xl mx-auto my-12">
         <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 font-custom">
-            Current Promotions
+            ACT NOW!
           </h2>
-          <p className="text-gray-600 mt-2 text-lg">
-            Don’t miss these limited-time offers!
-          </p>
+          <p className="text-gray-600 mt-2 text-lg">Limited-time offers.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -51,10 +48,11 @@ export default function Home() {
             data-aos="fade-up"
           >
             <h3 className="text-xl font-semibold text-blue-700 mb-2">
-              FREE SHIPPING
+              <span className="font-extrabold">FREE</span> SHIPPING
             </h3>
             <p className="text-gray-600 mb-4">
-              Purchase a book now through August 31, 2025 and receive free shipping!
+              Purchase a book now through September 30, 2025 and receive free
+              shipping!
             </p>
             <a
               href="/book"
@@ -74,11 +72,12 @@ export default function Home() {
               Free Chapter Preview
             </h3>
             <p className="text-gray-600 mb-4">
-              Sign up for our newsletter and receive a free downloadable chapter
-              of <span className="font-semibold">Imperfect Happiness</span>.
-            </p>
+              Drop us on note on our Contact Page requesting a FREE downloadable
+              chapter of  <span className="font-semibold">IMPƎRFƎCT HAPPINESS</span>.</p>
+             
+            
             <a
-              href="/newsletter"
+              href="/contact"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-md transition"
             >
               Subscribe Now

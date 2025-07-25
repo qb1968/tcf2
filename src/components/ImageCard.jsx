@@ -21,18 +21,17 @@ const ImageCard = () => {
         {/* Description */}
         <p className="text-gray-700 leading-relaxed text-base sm:text-lg font-light font-custom mb-4">
           <span className="font-bold">IMPƎRFƎCT HAPPINESS</span> is based on
-          real events and follows the author’s journey from a teenager dreaming
-          of success in a struggling community to achieving the American Dream
-          and living a life of executive privilege. Despite the lavish trips,
-          private jets, limousines, and the power he once believed would bring
-          happiness and fulfillment, he discovered an unexpected emptiness—and
-          began a deeper journey toward what he now calls{" "}
+          real events and following the author’s journey from a teenager, in a
+          struggling community, dreaming of success to achieving his American
+          Dream living a life of executive privilege. Despite lavish trips,
+          private jets, limousines and power he once believed would bring
+          happiness, he discovers an emptiness which begins his journey of{" "}
           <span className="italic">"Imperfect Happiness."</span>
         </p>
         <p className="text-gray-700 leading-relaxed text-base sm:text-lg font-light font-custom">
           This is a story of adventure and love—of the dead ends of life without
-          Godly hope, contrasted with the lasting happiness and contentment
-          found in a life lived well with God.
+          Godly Hope, contrasted by the inspirational message of happiness and
+          contentment of choosing to live life well with God.
         </p>
 
         {/* Button */}
