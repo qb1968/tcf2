@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import ImageCard from "../components/ImageCard";
 import ImageContainer from "../components/ImageContainer";
 import UpcomingEventsCarousel from "../components/UpcomingEventsCarousel";
@@ -54,13 +54,13 @@ export default function Home() {
               Purchase a book now through September 30, 2025 and receive free
               shipping!
             </p>
-            <a
-              href="/book"
+            <Link
+              to="/book"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-md transition"
               data-aos="fade-up"
             >
               Claim Offer
-            </a>
+            </Link>
           </div>
 
           {/* Promotion 2 */}
@@ -76,12 +76,12 @@ export default function Home() {
               chapter of  <span className="font-semibold">IMPƎRFƎCT HAPPINESS</span>.</p>
              
             
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-md transition"
             >
               Subscribe Now
-            </a>
+            </Link>
           </div>
 
           {/* Promotion 3 */}
@@ -96,12 +96,12 @@ export default function Home() {
               Hosting a book club? Get bulk discounts and a free virtual Q&A
               session with the author.
             </p>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-md transition"
             >
               Inquire Now
-            </a>
+            </Link>
           </div>
         </div>
       </section>
