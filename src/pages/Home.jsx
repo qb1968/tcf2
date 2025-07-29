@@ -35,10 +35,11 @@ export default function Home() {
       {/* Current Promotions Section */}
       <section className="bg-gradient-to-b from-blue-50 via-white to-blue-100 py-12 px-6 rounded-3xl shadow-inner max-w-6xl mx-auto my-12">
         <div className="text-center mb-10">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 font-custom">Current Promotions</h1>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 font-custom">
             ACT NOW!
           </h2>
-          <p className="text-gray-600 mt-2 text-lg">Limited-time offers.</p>
+          <p className="text-gray-800 mt-2 text-lg font-bold">Limited-time offers.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
