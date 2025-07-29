@@ -21,7 +21,7 @@ const ImageCard = () => {
         {/* Description */}
         <p className="text-gray-700 leading-relaxed text-base sm:text-lg font-light font-custom mb-4">
           <span className="font-bold">IMPƎRFƎCT HAPPINESS</span> is based on
-          real events and following the author’s journey from a teenager, in a
+          real events following the author’s journey from a teenager, in a
           struggling community, dreaming of success to achieving his American
           Dream living a life of executive privilege. Despite lavish trips,
           private jets, limousines and power he once believed would bring

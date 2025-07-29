@@ -26,7 +26,7 @@ export default function BioSection() {
           <p className="text-gray-700 leading-relaxed mb-5">
             Designed to entertain and inform, IMPERFECT HAPPINESS is a positive
             story of hope, kindness and resilience using relatable examples of
-            God&#39;s many resources to reduce anxiety, secure greater happiness
+            God&#39;s many resources to reduce anxiety, achieve greater happiness
             and Godly Wisdom.
           </p>
           <p className="text-gray-700 leading-relaxed mb-5">

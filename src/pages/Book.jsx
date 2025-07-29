@@ -147,7 +147,7 @@ export default function AboutTheBook() {
               <div className="space-y-4">
                 <p>
                   Whether you're young, seeking God, a new follower of Christ,
-                  or simply desiring a closer relationship to Christ this book
+                  or simply desiring a closer relationship with Jesus, this book
                   offers real-life applications and lessons born from the
                   author's own mistakes and victories. The book's pillars are
                   the Word of God, The Life of Jesus, Prayer, and Christian
@@ -167,9 +167,9 @@ export default function AboutTheBook() {
                     -our increased understanding of who God is and what he wants
                   </span>{" "}
                   is the primary theme of the book. The author demonstrates,
-                  through the mountains and valleys of his life's "Imperfect
-                  Happiness" that most things we want in life are better after
-                  realizing Godly Wisdom.
+                  through life&#39;s peaks and valleys, or &quot;Imperfect
+                  Happiness,&quot; that most things we want in life are better
+                  when we choose to pursue Godly Wisdom.
                 </p>
                 <p>The book can be read multiple ways including:</p>
                 <ul className="list-disc list-inside pl-4 space-y-1 text-gray-300">
