@@ -70,7 +70,7 @@ export default function Home() {
             data-aos="fade-up"
           >
             <h3 className="text-xl font-semibold text-blue-700 mb-2">
-              Free Chapter Preview
+              FREE Chapter Preview
             </h3>
             <p className="text-gray-600 mb-4">
               Drop us on note on our Contact Page requesting a FREE downloadable
