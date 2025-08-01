@@ -79,7 +79,7 @@ export default function AboutTheBook() {
   );
 
   return (
-    <section className="bg-gradient-to-r from-gray-600 via-gray-8=700 to-gray-800 text-gray-100 min-h-screen py-16 px-6 font-custom max-w-6xl mx-auto rounded-xl">
+    <section id="book" className="bg-gradient-to-r from-gray-600 via-gray-8=700 to-gray-800 text-gray-100 min-h-screen py-16 px-6 font-custom max-w-6xl mx-auto rounded-xl">
       {/* Book Section */}
       <div className="grid md:grid-cols-2 gap-12 items-start">
         <div>

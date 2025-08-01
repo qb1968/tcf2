@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import ImageCard from "../components/ImageCard";
 import ImageContainer from "../components/ImageContainer";
 import UpcomingEventsCarousel from "../components/UpcomingEventsCarousel";
 
 export default function Home() {
   return (
-    <section className="max-w-7xl mx-auto font-custom text-gray-800 ">
+    <section id="home" className="max-w-7xl mx-auto font-custom text-gray-800 ">
       {/* Hero Section */}
       <div className="relative isolate overflow-hidden bg-gray-900 rounded-xl">
         <img
@@ -55,13 +56,13 @@ export default function Home() {
               Purchase a book now through September 30, 2025 and receive free
               shipping!
             </p>
-            <Link
-              to="/book"
+            <HashLink
+              smooth to ="/book#book"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-md transition"
               data-aos="fade-up"
             >
               Claim Offer
-            </Link>
+            </HashLink>
           </div>
 
           {/* Promotion 2 */}
@@ -73,7 +74,7 @@ export default function Home() {
               FREE Chapter Preview
             </h3>
             <p className="text-gray-600 mb-4">
-              Drop us on note on our Contact Page requesting a FREE downloadable
+              Drop us a note on our Contact Page requesting a FREE downloadable
               chapter of  <span className="font-semibold">IMPƎRFƎCT HAPPINESS</span>.</p>
              
             
@@ -97,12 +98,12 @@ export default function Home() {
               Hosting a book club? Get bulk discounts and a free virtual Q&A
               session with the author.
             </p>
-            <Link
-              to="/contact"
+            <HashLink
+              smooth to="/contact#contact"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-md transition"
             >
               Inquire Now
-            </Link>
+            </HashLink>
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { FaLinkedin } from "react-icons/fa"; // Import LinkedIn icon
 
 const Footer = () => {
@@ -24,18 +25,18 @@ const Footer = () => {
 
         {/* Center Links */}
         <div className="flex flex-wrap justify-center gap-6 text-md font-medium text-gray-300">
-          <Link to="/" className="hover:text-white transition">
+          <HashLink smooth to="/#home" className="hover:text-white transition">
             Home
-          </Link>
+          </HashLink>
           <Link to="/about" className="hover:text-white transition">
             Author
           </Link>
-          <Link to="/book" className="hover:text-white transition">
+          <HashLink to="/book#book" className="hover:text-white transition">
             About The Book
-          </Link>
-          <Link to="/contact" className="hover:text-white transition">
+          </HashLink>
+          <HashLink to="/contact#contact2" className="hover:text-white transition">
             Contact
-          </Link>
+          </HashLink>
         </div>
 
         {/* Right Icons */}

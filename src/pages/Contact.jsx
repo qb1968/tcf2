@@ -39,10 +39,9 @@ export default function Contact() {
   };
 
   return (
-    <section className="bg-gradient-to-b from-gray-800 via-gray-700 to-gray-900 text-gray-100 min-h-screen py-16 px-6 font-custom">
+    <section id="contact2" className="bg-gradient-to-b from-gray-800 via-gray-700 to-gray-900 text-gray-100 min-h-screen py-16 px-6 font-custom">
       <div className="max-w-3xl mx-auto bg-white text-gray-900 rounded-2xl shadow-xl p-10">
         <div className="text-center mb-8">
-          
           <div className="w-full aspect-[4/3] mb-6">
             <img
               src="/images/water3.jpg"
@@ -50,11 +49,13 @@ export default function Contact() {
               className="w-full h-full object-contain rounded-lg"
             />
           </div>
-          <h2 className="text-3xl font-extrabold text-gray-900 mb-2">
+          <h2 id="contact" className="text-3xl font-extrabold text-gray-900 mb-2">
             Contact Us
           </h2>
-          <p className="text-gray-600 font-bold">
-            Personal Requests          </p>
+          <h3 className="text-gray-800 font-extrabold">
+            Please Fill Form Out Completely
+          </h3>
+          <p className="text-gray-800 font-bold">Personal Requests </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -102,7 +103,7 @@ export default function Contact() {
               <option value="General Question">General Question</option>
               <option value="Index">Index by Subject & Page</option>
               <option value="Prayer Request">Prayer Request</option>
-              
+
               <option value="Testimonial">Share Positive Story</option>
               <option value="Speaking Engagement">Speaking Engagement</option>
             </select>
