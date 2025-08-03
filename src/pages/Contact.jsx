@@ -18,11 +18,18 @@ export default function Contact() {
    setStatus("loading");
 
    try {
-    const response = await fetch("https://tcf2.vercel.app/api/formspark-webhook", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+     const response = await fetch("https://submit-form.com/5tqkiLikJ", {
+       method: "POST",
+       headers: {
+         "Content-Type": "application/json",
+         Accept: "application/json",
+       },
+       body: JSON.stringify(formData),
+     });
+
+     console.log("Status:", response.status);
+     const data = await response.json();
+     console.log("Response data:", data);
 
      if (response.ok) {
        setStatus("success");
@@ -31,9 +38,11 @@ export default function Contact() {
        setStatus("error");
      }
    } catch (error) {
+     console.error("Submit error:", error);
      setStatus("error");
    }
  };
+
 
 
   return (
@@ -120,7 +129,7 @@ export default function Contact() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
-
+          
           <button
             type="submit"
             disabled={status === "loading"}
