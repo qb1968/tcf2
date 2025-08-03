@@ -33,7 +33,12 @@ ${message || "No message provided"}
     await mg.messages().send(emailData);
     res.status(200).json({ message: "Email sent successfully" });
   } catch (error) {
-    console.error("Mailgun error:", error);
-    res.status(500).json({ error: "Failed to send email" });
+    console.error("Mailgun error:", error?.message || error);
+    res
+      .status(500)
+      .json({
+        error: "Failed to send email",
+        details: error?.message || error,
+      });
   }
 }
