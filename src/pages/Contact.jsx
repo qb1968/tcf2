@@ -18,7 +18,7 @@ export default function Contact() {
    setStatus("loading");
 
    try {
-    const response = await fetch("/api/formspark-webhook", {
+    const response = await fetch("https://tcf2.vercel.app/api/formspark-webhook", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
