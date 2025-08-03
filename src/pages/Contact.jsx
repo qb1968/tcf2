@@ -13,30 +13,28 @@ export default function Contact() {
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("loading");
+ const handleSubmit = async (e) => {
+   e.preventDefault();
+   setStatus("loading");
 
-    try {
-      const response = await fetch("https://submit-form.com/5tqkiLikJ", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+   try {
+    const response = await fetch("/api/formspark-webhook", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
 
-      if (response.ok) {
-        setStatus("success");
-        setFormData({ name: "", email: "", message: "", reason: "" });
-      } else {
-        setStatus("error");
-      }
-    } catch (error) {
-      setStatus("error");
-    }
-  };
+     if (response.ok) {
+       setStatus("success");
+       setFormData({ name: "", email: "", message: "", reason: "" });
+     } else {
+       setStatus("error");
+     }
+   } catch (error) {
+     setStatus("error");
+   }
+ };
+
 
   return (
     <section id="contact2" className="bg-gradient-to-b from-gray-800 via-gray-700 to-gray-900 text-gray-100 min-h-screen py-16 px-6 font-custom">
