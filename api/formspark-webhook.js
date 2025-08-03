@@ -30,15 +30,30 @@ ${message || "No message provided"}
   };
 
   try {
+    // Send email to admin
     await mg.messages().send(emailData);
-    res.status(200).json({ message: "Email sent successfully" });
+
+    // Send SMS via Verizon vtext.com if number provided in env
+    if (process.env.VERIZON_NUMBER) {
+      const verizonEmail = `${process.env.VERIZON_NUMBER}@vtext.com`;
+      const smsData = {
+        from: process.env.ADMIN_EMAIL,
+        to: verizonEmail,
+        subject: "", // Leave blank for SMS
+        text: `New message from ${name} (${email}): ${message.substring(
+          0,
+          160
+        )}`,
+      };
+      await mg.messages().send(smsData);
+    }
+
+    res.status(200).json({ message: "Email and SMS sent successfully" });
   } catch (error) {
     console.error("Mailgun error:", error?.message || error);
-    res
-      .status(500)
-      .json({
-        error: "Failed to send email",
-        details: error?.message || error,
-      });
+    res.status(500).json({
+      error: "Failed to send email or SMS",
+      details: error?.message || error,
+    });
   }
 }
