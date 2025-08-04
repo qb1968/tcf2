@@ -203,14 +203,16 @@ export default function AboutTheBook() {
             <p className="text-3xl font-bold text-white mb-4">$19.95</p>
             <p className="text-sm font-bold text-white mb-4">Plus Shipping</p>
             <a
-              href="https://buy.stripe.com/test_aFaeVe3TTa0T1242EoeZ201"
+              href="https://buy.stripe.com/test_cNi4gAcqp7SLeSU6UEeZ202"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-xl shadow-lg transition duration-300"
             >
               Pre-Order Now
             </a>
-            <p className="text-md font-bold text-white mt-4">Available 9/1/2025</p>
+            <p className="text-md font-bold text-white mt-4">
+              Available 9/1/2025
+            </p>
           </div>
         </div>
       </div>
