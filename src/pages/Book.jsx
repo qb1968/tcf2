@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y } from "swiper/modules";
+import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -223,11 +223,13 @@ export default function AboutTheBook() {
           What Readers are Saying
         </h3>
         <Swiper
-          modules={[Navigation, Pagination, A11y]}
+          modules={[Navigation, Pagination, A11y, Autoplay]}
+          autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true, }}
+          
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
-          loop
+          loop= {true}
           className="max-w-2xl mx-auto"
         >
           {reviews.map((rev, idx) => (
