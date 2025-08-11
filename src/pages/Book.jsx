@@ -125,7 +125,7 @@ export default function AboutTheBook() {
             </p>
             <p>
               Grounded in biblical principles and paired with proven business
-              techniques, the book explores The Caring Continuum (Philippians
+              techniques, the book explores effective life skills and leadership practices such as The Caring Continuum (Philippians
               2:4), In Front, Not Above (Matthew 20:26), Brilliant on the Basics
               (Psalm 19:7), and 21 Steps to Being the Best Imperfect You (2
               Timothy 2:15).

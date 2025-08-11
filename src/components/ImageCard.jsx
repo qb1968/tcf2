@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ImageCard = () => {
   return (
-    <div className="max-w-4xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden border border-gray-200">
+    <div className="max-w-4xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden border border-gray-200 hover:shadow-gray-500">
       <div className="p-8 sm:p-10 text-center">
         {/* Title */}
         <h1 className="text-4xl sm:text-5xl font-extrabold mb-1 text-gray-900 tracking-tight">
