@@ -66,7 +66,7 @@ export default function AboutTheBook() {
       if (scrollRef.current) {
         const totalWidth = scrollRef.current.scrollWidth / 2; // half because of duplicate
         setScrollWidth(totalWidth);
-        setDuration(Math.max(totalWidth / 80, 50)); // adjust speed
+        setDuration(Math.max(totalWidth / 40, 80)); // adjust speed
       }
     }, [reviews]);
 
@@ -263,11 +263,23 @@ export default function AboutTheBook() {
               {[...reviews, ...reviews].map((rev, idx) => (
                 <article
                   key={idx}
-                  className="inline-block min-w-[300px] bg-gray-800 border border-gray-700 rounded-2xl shadow-lg p-8 m-2 text-center transition-shadow duration-300 hover:shadow-[0_0_20px_#3b82f6]"
+                  className="inline-block min-w-[300px] bg-gray-800 border border-gray-700 rounded-2xl shadow-lg p-8 m-2 text-center transition-shadow duration-300 hover:animate-pulse-glow"
+                  style={{
+                    animationName: "none",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.animation =
+                      "pulse-glow 1.5s infinite";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.animation = "none";
+                  }}
                 >
                   <p className="text-yellow-400">{"★".repeat(rev.rating)}</p>
                   <p className="text-gray-300 italic">“{rev.text}”</p>
-                  <p className="font-semibold text-gray-100">— {rev.name}</p>
+                  <p className="font-semibold text-gray-100 mt-2">
+                    — {rev.name}
+                  </p>
                 </article>
               ))}
             </div>
