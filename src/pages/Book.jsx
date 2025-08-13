@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
@@ -9,6 +9,10 @@ import "swiper/css/pagination";
 export default function AboutTheBook() {
   const [isExpanded, setIsExpanded] = useState(false);
   const handleToggle = () => setIsExpanded(!isExpanded);
+  const scrollRef = useRef(null);
+  const [duration, setDuration] = useState(30); // faster default
+   const [scrollWidth, setScrollWidth] = useState(0);
+ 
 
   const [reviews] = useState([
     {
@@ -58,6 +62,27 @@ export default function AboutTheBook() {
     },
   ]);
 
+    useEffect(() => {
+      if (scrollRef.current) {
+        const totalWidth = scrollRef.current.scrollWidth / 2; // half because of duplicate
+        setScrollWidth(totalWidth);
+        setDuration(Math.max(totalWidth / 80, 50)); // adjust speed
+      }
+    }, [reviews]);
+
+    const marqueeStyle = {
+      display: "flex",
+      flexWrap: "nowrap",
+      animation: `scroll ${duration}s linear infinite`,
+    };
+
+    const keyframesStyle = `
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-${scrollWidth}px); }
+    }
+  `;
+
   const [form, setForm] = useState({ name: "", rating: 5, text: "" });
   const [pendingMessage, setPendingMessage] = useState("");
   const [preview, setPreview] = useState(false);
@@ -81,7 +106,7 @@ export default function AboutTheBook() {
   return (
     <section
       id="book"
-      className="bg-gradient-to-r from-gray-600 via-gray-8=700 to-gray-800 text-gray-100 min-h-screen py-16 px-6 font-custom max-w-6xl mx-auto rounded-xl"
+      className="bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 text-gray-100 min-h-screen py-16 px-6 font-custom max-w-6xl mx-auto rounded-xl"
     >
       {/* Book Section */}
       <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -125,10 +150,11 @@ export default function AboutTheBook() {
             </p>
             <p>
               Grounded in biblical principles and paired with proven business
-              techniques, the book explores effective life skills and leadership practices such as The Caring Continuum (Philippians
-              2:4), In Front, Not Above (Matthew 20:26), Brilliant on the Basics
-              (Psalm 19:7), and 21 Steps to Being the Best Imperfect You (2
-              Timothy 2:15).
+              techniques, the book explores effective life skills and leadership
+              practices such as The Caring Continuum (Philippians 2:4), In
+              Front, Not Above (Matthew 20:26), Brilliant on the Basics (Psalm
+              19:7), and 21 Steps to Being the Best Imperfect You (2 Timothy
+              2:15).
             </p>
             <p>
               The author concludes by inviting readers to return our communities
@@ -217,31 +243,36 @@ export default function AboutTheBook() {
         </div>
       </div>
 
-      {/* Reviews Section */}
-      <div className="mt-24">
+      <div className="mt-24 overflow-hidden">
         <h3 className="text-3xl font-bold text-center mb-10 text-gray-100">
           What Readers are Saying
         </h3>
-        <Swiper
-          modules={[Navigation, Pagination, A11y, Autoplay]}
-          autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true, }}
-          
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          loop= {true}
-          className="max-w-2xl mx-auto"
-        >
-          {reviews.map((rev, idx) => (
-            <SwiperSlide key={idx}>
-              <article className="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg p-8 text-center space-y-4">
-                <StarRating count={rev.rating} />
-                <p className="text-gray-300 italic">“{rev.text}”</p>
-                <p className="font-semibold text-gray-100">— {rev.name}</p>
-              </article>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+
+        <div className="mt-24 overflow-hidden">
+          <style>{keyframesStyle}</style>
+          <div
+            className="overflow-hidden"
+            onMouseEnter={() =>
+              (scrollRef.current.style.animationPlayState = "paused")
+            }
+            onMouseLeave={() =>
+              (scrollRef.current.style.animationPlayState = "running")
+            }
+          >
+            <div ref={scrollRef} style={marqueeStyle}>
+              {[...reviews, ...reviews].map((rev, idx) => (
+                <article
+                  key={idx}
+                  className="inline-block min-w-[300px] bg-gray-800 border border-gray-700 rounded-2xl shadow-lg p-8 m-2 text-center transition-shadow duration-300 hover:shadow-[0_0_20px_#3b82f6]"
+                >
+                  <p className="text-yellow-400">{"★".repeat(rev.rating)}</p>
+                  <p className="text-gray-300 italic">“{rev.text}”</p>
+                  <p className="font-semibold text-gray-100">— {rev.name}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Submit Review */}
