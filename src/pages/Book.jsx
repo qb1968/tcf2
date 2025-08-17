@@ -111,11 +111,26 @@ export default function AboutTheBook() {
       {/* Book Section */}
       <div className="grid md:grid-cols-2 gap-12 items-start">
         <div>
-          <img
-            src="/images/book.jpg"
-            alt="Book Cover"
-            className="rounded-2xl shadow-2xl w-full"
-          />
+          <style>
+{`
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.9);
+    }
+  }
+`}
+</style>
+
+<img
+  src="/images/cover.jpg"
+  alt="Book Cover"
+  className="rounded-2xl w-full"
+  style={{ animation: "glow-pulse 2s infinite" }}
+/>
+
           <h2 className="text-blue-400 font-semibold mt-4 text-center hover:underline">
             Publisher:{" "}
             <Link
