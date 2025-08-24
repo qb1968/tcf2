@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { FaLinkedin } from "react-icons/fa"; // Import LinkedIn icon
+import { FaLinkedin, FaFacebookF, FaYoutube } from "react-icons/fa"; // Import LinkedIn, Facebook, YouTube
 
 const Footer = () => {
   return (
@@ -34,7 +34,10 @@ const Footer = () => {
           <HashLink to="/book#book" className="hover:text-white transition">
             About The Book
           </HashLink>
-          <HashLink to="/contact#contact2" className="hover:text-white transition">
+          <HashLink
+            to="/contact#contact2"
+            className="hover:text-white transition"
+          >
             Contact
           </HashLink>
         </div>
@@ -49,6 +52,24 @@ const Footer = () => {
             aria-label="LinkedIn"
           >
             <FaLinkedin />
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61572695820957" // replace with your FB link
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition text-2xl"
+            aria-label="Facebook"
+          >
+            <FaFacebookF />
+          </a>
+          <a
+            href="http://www.youtube.com/@imperfecthappiness" // replace with your YT link
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition text-2xl"
+            aria-label="YouTube"
+          >
+            <FaYoutube />
           </a>
         </div>
       </div>

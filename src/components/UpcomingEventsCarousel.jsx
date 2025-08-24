@@ -15,7 +15,7 @@ const events = [
 export default function UpcomingEventsCarousel() {
   return (
     <section className="py-16 px-4 bg-gray-900 text-white">
-      <h2 className="text-3xl font-bold text-center mb-10">Upcoming Events</h2>
+      <h2 className="text-3xl font-bold text-center mb-10">Past & Upcoming Events</h2>
       <Swiper
         modules={[Navigation]}
         slidesPerView={1}

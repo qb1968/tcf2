@@ -51,11 +51,11 @@ export default function Navbar() {
         </div>
 
         {/* Right side: Shop link aligned to edge */}
-        <div className="text-sm font-medium text-gray-300">
+        {/* <div className="text-sm font-medium text-gray-300">
           <Link to="/shop" className="hover:text-white text-lg underline">
             Shop
           </Link>
-        </div>
+        </div> */}
       </div>
 
       {/* Mobile menu */}
@@ -98,7 +98,7 @@ export default function Navbar() {
                 Contact
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 to="/shop"
                 onClick={() => setIsOpen(false)}
@@ -106,7 +106,7 @@ export default function Navbar() {
               >
                 Shop
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       )}
