@@ -54,7 +54,7 @@ export default function Home() {
             </h3>
             <p className="text-gray-600 mb-4">
               Purchase a book through October 31, 2025 and receive free
-              shipping! (U.S. orders only)
+              shipping! <br/> (U.S. orders only)
             </p>
             <HashLink
               smooth to ="/book#book"
