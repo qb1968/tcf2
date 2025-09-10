@@ -112,7 +112,7 @@ export default function AboutTheBook() {
       <div className="grid md:grid-cols-2 gap-12 items-start">
         <div>
           <style>
-{`
+            {`
   @keyframes glow-pulse {
     0%, 100% {
       box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
@@ -122,14 +122,14 @@ export default function AboutTheBook() {
     }
   }
 `}
-</style>
+          </style>
 
-<img
-  src="/images/cover.jpg"
-  alt="Book Cover"
-  className="rounded-2xl w-full"
-  style={{ animation: "glow-pulse 2s infinite" }}
-/>
+          <img
+            src="/images/cover.jpg"
+            alt="Book Cover"
+            className="rounded-2xl w-full"
+            style={{ animation: "glow-pulse 2s infinite" }}
+          />
 
           <h2 className="text-blue-400 font-semibold mt-4 text-center hover:underline">
             Publisher:{" "}
@@ -243,81 +243,82 @@ export default function AboutTheBook() {
           <div className="mt-8 text-center">
             <p className="text-3xl font-bold text-white mb-4">$19.95</p>
             <p className="text-sm font-bold text-white mb-4">Plus Shipping</p>
-            {/* <a
-              href="https://buy.stripe.com/test_cNi4gAcqp7SLeSU6UEeZ202"
+            <a
+              href="https://buy.stripe.com/7sY9AVecV1Lpfnla9hcjS00"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-xl shadow-lg transition duration-300"
             >
               Pre-Order Now
-            </a> */}
+            </a>
             <p className="text-lg font-bold text-blue-400 mt-4">
-              Pre Orders Begin 9/8/2025
+              Now Accepting Pre-Orders!
             </p>
           </div>
         </div>
       </div>
 
       <div className="mt-24 overflow-hidden">
-  <h3 className="text-3xl font-bold text-center mb-10 text-gray-100">
-    What Readers are Saying
-  </h3>
+        <h3 className="text-3xl font-bold text-center mb-10 text-gray-100">
+          What Readers are Saying
+        </h3>
 
-  {/* Desktop Instruction */}
-  <p className="hidden md:block text-md font-bold text-white text-center underline">
-    Hover over a review to read
-  </p>
+        {/* Desktop Instruction */}
+        <p className="hidden md:block text-md font-bold text-white text-center underline">
+          Hover over a review to read
+        </p>
 
-  {/* Mobile Instruction */}
-  <p className="block md:hidden text-md font-bold text-white text-center underline">
-    Tap a review to read
-  </p>
+        {/* Mobile Instruction */}
+        <p className="block md:hidden text-md font-bold text-white text-center underline">
+          Tap a review to read
+        </p>
 
-  <div className="mt-24 overflow-hidden">
-    <style>{keyframesStyle}</style>
-    <div
-      className="overflow-hidden"
-      onMouseEnter={() =>
-        (scrollRef.current.style.animationPlayState = "paused")
-      }
-      onMouseLeave={() =>
-        (scrollRef.current.style.animationPlayState = "running")
-      }
-    >
-      <div ref={scrollRef} style={marqueeStyle}>
-        {[...reviews, ...reviews].map((rev, idx) => (
-          <article
-            key={idx}
-            className="inline-block min-w-[300px] bg-gray-800 border border-gray-700 rounded-2xl shadow-lg p-8 m-2 text-center transition-shadow duration-300 hover:animate-pulse-glow"
-            style={{
-              animationName: "none",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.animation = "pulse-glow 1.5s infinite";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.animation = "none";
-            }}
-            onTouchStart={(e) => {
-              // Optional: highlight on tap for mobile
-              e.currentTarget.style.animation = "pulse-glow 1.5s infinite";
-            }}
-            onTouchEnd={(e) => {
-              e.currentTarget.style.animation = "none";
-            }}
+        <div className="mt-24 overflow-hidden">
+          <style>{keyframesStyle}</style>
+          <div
+            className="overflow-hidden"
+            onMouseEnter={() =>
+              (scrollRef.current.style.animationPlayState = "paused")
+            }
+            onMouseLeave={() =>
+              (scrollRef.current.style.animationPlayState = "running")
+            }
           >
-            <p className="text-yellow-400">{"★".repeat(rev.rating)}</p>
-            <p className="text-gray-300 italic">“{rev.text}”</p>
-            <p className="font-semibold text-gray-100 mt-2">
-              — {rev.name}
-            </p>
-          </article>
-        ))}
+            <div ref={scrollRef} style={marqueeStyle}>
+              {[...reviews, ...reviews].map((rev, idx) => (
+                <article
+                  key={idx}
+                  className="inline-block min-w-[300px] bg-gray-800 border border-gray-700 rounded-2xl shadow-lg p-8 m-2 text-center transition-shadow duration-300 hover:animate-pulse-glow"
+                  style={{
+                    animationName: "none",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.animation =
+                      "pulse-glow 1.5s infinite";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.animation = "none";
+                  }}
+                  onTouchStart={(e) => {
+                    // Optional: highlight on tap for mobile
+                    e.currentTarget.style.animation =
+                      "pulse-glow 1.5s infinite";
+                  }}
+                  onTouchEnd={(e) => {
+                    e.currentTarget.style.animation = "none";
+                  }}
+                >
+                  <p className="text-yellow-400">{"★".repeat(rev.rating)}</p>
+                  <p className="text-gray-300 italic">“{rev.text}”</p>
+                  <p className="font-semibold text-gray-100 mt-2">
+                    — {rev.name}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
 
       {/* Submit Review */}
       <div className="mt-20 max-w-xl mx-auto bg-gray-800 border border-gray-700 rounded-2xl p-8 shadow-lg">
