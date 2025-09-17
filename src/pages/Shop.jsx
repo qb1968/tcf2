@@ -180,7 +180,7 @@ export default function Shop() {
             );
           })}
         </div>
-        <h2 className="text-lg font-bold"> A portion of the proceeds from all book and apparel sales will go to childrenwith special needs</h2>
+        <h2 className="text-lg font-bold mt-10"> A portion of the proceeds from all book and apparel sales will go to children with special needs</h2>
       </div>
     </section>
   );
