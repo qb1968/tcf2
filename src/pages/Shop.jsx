@@ -175,6 +175,7 @@ export default function Shop() {
                     Buy
                   </button>
                 </div>
+                <h2 className="text-lg font-bold"> A portion of the proceeds from all book and apparel sales will go to childrenwith special needs</h2>
               </div>
             );
           })}
