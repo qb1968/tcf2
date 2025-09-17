@@ -119,14 +119,15 @@ export default function Shop() {
                     ${product.price.toFixed(2)}
                   </p>
 
-                  <div className="flex gap-2 mb-4">
+                  {/* Dropdowns: stack vertically on mobile */}
+                  <div className="flex flex-col sm:flex-row gap-2 mb-4">
                     {/* Size */}
                     <select
                       value={selections[product.id]?.size || "M"}
                       onChange={(e) =>
                         handleSelectChange(product.id, "size", e.target.value)
                       }
-                      className="border rounded px-2 py-1"
+                      className="border rounded px-3 py-2 text-sm sm:text-base w-full sm:w-auto"
                     >
                       <option value="M">M</option>
                       <option value="L">L</option>
@@ -140,7 +141,7 @@ export default function Shop() {
                       onChange={(e) =>
                         handleSelectChange(product.id, "color", e.target.value)
                       }
-                      className="border rounded px-2 py-1"
+                      className="border rounded px-3 py-2 text-sm sm:text-base w-full sm:w-auto"
                     >
                       <option value="Black">Black</option>
                       <option value="Navy">Navy Blue</option>
@@ -156,7 +157,7 @@ export default function Shop() {
                           e.target.value
                         )
                       }
-                      className="border rounded px-2 py-1"
+                      className="border rounded px-3 py-2 text-sm sm:text-base w-full sm:w-auto"
                     >
                       {[1, 2, 3, 4, 5].map((q) => (
                         <option key={q} value={q}>
@@ -166,9 +167,10 @@ export default function Shop() {
                     </select>
                   </div>
 
+                  {/* Buy Button: full width on mobile */}
                   <button
                     onClick={() => handleBuy(product)}
-                    className="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded"
+                    className="w-full sm:w-auto mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded"
                   >
                     Buy
                   </button>
