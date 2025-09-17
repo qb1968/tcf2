@@ -47,6 +47,11 @@ export default function Navbar() {
                 Contact
               </Link>
             </li>
+            <li>
+              <Link to="/shop" className="hover:text-white text-lg underline">
+                Shop
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -98,7 +103,7 @@ export default function Navbar() {
                 Contact
               </Link>
             </li>
-            {/* <li>
+            <li>
               <Link
                 to="/shop"
                 onClick={() => setIsOpen(false)}
@@ -106,7 +111,7 @@ export default function Navbar() {
               >
                 Shop
               </Link>
-            </li> */}
+            </li>
           </ul>
         </div>
       )}
