@@ -249,10 +249,13 @@ export default function AboutTheBook() {
               rel="noopener noreferrer"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-xl shadow-lg transition duration-300"
             >
-              Pre-Order Now
+              Buy Now
             </a>
             <p className="text-lg font-bold text-blue-400 mt-4">
-              Now Accepting Pre-Orders!
+              Now Available!
+            </p>
+            <p className="text-lg font-semi-bold text-white mt-4">
+              Available wherever books are sold including:<br/> Amazon and Barnes & Noble.<br/> IMPERFECT HAPPINESS eBook also available on your favorite audiobook platform.
             </p>
           </div>
         </div>
