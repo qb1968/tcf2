@@ -44,7 +44,7 @@ export default function UpcomingEventsCarousel() {
               <p className="text-gray-200 italic">{ev.blurb}</p>
 
               {/* Local Videos */}
-              <div className="flex flex-wrap justify-center gap-4 mt-6">
+              {/* <div className="flex flex-wrap justify-center gap-4 mt-6">
                 {ev.videos?.map((vid, i) => (
                   <video
                     key={i}
@@ -58,7 +58,7 @@ export default function UpcomingEventsCarousel() {
                     Your browser does not support the video tag.
                   </video>
                 ))}
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
         ))}
