@@ -51,7 +51,10 @@ export default function UpcomingEventsCarousel() {
                     controls
                     className="w-full sm:w-80 md:w-96 h-48 md:h-56 rounded-xl border border-gray-500"
                   >
-                    <source src={vid} type="video/mp4" />
+                    <source
+                      src={`/videos/video${i + 1}.mp4`}
+                      type="video/mp4"
+                    />
                     Your browser does not support the video tag.
                   </video>
                 ))}
