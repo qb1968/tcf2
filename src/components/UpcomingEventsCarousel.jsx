@@ -10,13 +10,12 @@ const events = [
     place: "St. Paul's Lutheran Church",
     blurb: "10:30 AM",
     videos: [
-      "/images/video1.mp4",
-      "/images/video2.mp4",
-      "/images/video3.mp4",
-      "/images/video4.mp4",
-      "/images/video5.mp4",
-     
-    ]
+      "/videos/video1.mp4",
+      "/videos/video2.mp4",
+      "/videos/video3.mp4",
+      "/videos/video4.mp4",
+      "/videos/video5.mp4",
+    ],
   },
 ];
 
@@ -26,6 +25,7 @@ export default function UpcomingEventsCarousel() {
       <h2 className="text-3xl font-bold text-center mb-10">
         Past & Upcoming Events
       </h2>
+
       <Swiper
         modules={[Navigation]}
         slidesPerView={1}
@@ -42,29 +42,19 @@ export default function UpcomingEventsCarousel() {
               <p className="text-gray-300 mb-1">📅 {ev.date}</p>
               <p className="text-gray-300 mb-3">📍 {ev.place}</p>
               <p className="text-gray-200 italic">{ev.blurb}</p>
-              {/* Multiple Videos */}
-              <div className="flex flex-wrap justify-center gap-4">
-                {ev.videos?.map((vid, i) =>
-                  vid.includes("youtube") ? (
-                    <iframe
-                      key={i}
-                      src={vid}
-                      title={`${ev.title}-video-${i}`}
-                      className="w-full sm:w-80 h-56 rounded-xl border border-gray-500"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
-                  ) : (
-                    <video
-                      key={i}
-                      controls
-                      className="w-full sm:w-80 h-56 rounded-xl border border-gray-500"
-                    >
-                      <source src={vid} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  )
-                )}
+
+              {/* Local Videos */}
+              <div className="flex flex-wrap justify-center gap-4 mt-6">
+                {ev.videos?.map((vid, i) => (
+                  <video
+                    key={i}
+                    controls
+                    className="w-full sm:w-80 md:w-96 h-48 md:h-56 rounded-xl border border-gray-500"
+                  >
+                    <source src={vid} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                ))}
               </div>
             </div>
           </SwiperSlide>
