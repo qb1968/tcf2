@@ -10,11 +10,11 @@ const events = [
     place: "St. Paul's Lutheran Church",
     blurb: "10:30 AM",
     videos: [
-      "/videos/compressed_video1.mp4",
-      "/videos/compressed_video2.mp4",
-      "/videos/compressed_video3.mp4",
-      "/videos/compressed_video4.mp4",
-      "/videos/compressed_video5.mp4",
+      "/videos/small_video1.mp4",
+      "/videos/small_video2.mp4",
+      "/videos/small_video3.mp4",
+      "/videos/small_video4.mp4",
+      "/videos/small_video5.mp4",
     ],
   },
 ];
