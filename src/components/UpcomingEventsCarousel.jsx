@@ -10,11 +10,11 @@ const events = [
     place: "St. Paul's Lutheran Church",
     blurb: "10:30 AM",
     videos: [
-      "/videos/video1.mp4",
-      "/videos/video2.mp4",
-      "/videos/video3.mp4",
-      "/videos/video4.mp4",
-      "/videos/video5.mp4",
+      "/videos/compressed_video1.mp4",
+      "/videos/compressed_video2.mp4",
+      "/videos/compressed_video3.mp4",
+      "/videos/compressed_video4.mp4",
+      "/videos/compressed_video5.mp4",
     ],
   },
 ];
@@ -44,7 +44,7 @@ export default function UpcomingEventsCarousel() {
               <p className="text-gray-200 italic">{ev.blurb}</p>
 
               {/* Local Videos */}
-              {/* <div className="flex flex-wrap justify-center gap-4 mt-6">
+              <div className="flex flex-wrap justify-center gap-4 mt-6">
                 {ev.videos?.map((vid, i) => (
                   <video
                     key={i}
@@ -58,7 +58,7 @@ export default function UpcomingEventsCarousel() {
                     Your browser does not support the video tag.
                   </video>
                 ))}
-              </div> */}
+              </div>
             </div>
           </SwiperSlide>
         ))}
