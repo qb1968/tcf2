@@ -10,11 +10,11 @@ const events = [
     place: "St. Paul's Lutheran Church",
     blurb: "10:30 AM",
     videos: [
-      "/videos/small_video1.mp4",
-      "/videos/small_video2.mp4",
-      "/videos/small_video3.mp4",
-      "/videos/small_video4.mp4",
-      "/videos/small_video5.mp4",
+      "https://res.cloudinary.com/dzofduj2h/video/upload/v1759444840/video1_fmo9kw.mp4",
+      "https://res.cloudinary.com/dzofduj2h/video/upload/v1759444558/video2_o1apiw.mp4",
+      "https://res.cloudinary.com/dzofduj2h/video/upload/v1759444835/video3_pjspum.mp4",
+      "https://res.cloudinary.com/dzofduj2h/video/upload/v1759444269/video4_pvvfkg.mp4",
+      "https://res.cloudinary.com/dzofduj2h/video/upload/v1759444236/video5_sir79n.mp4",
     ],
   },
 ];
