@@ -17,7 +17,7 @@ const products = [
     id: 3,
     name: "Hoodie",
     price: 42.0,
-    images: ["/images/Four.jpg"],
+    images: ["/images/Four.jpg", "/images/Five.JPEG"],
   },
 ];
 

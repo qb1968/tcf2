@@ -5,7 +5,7 @@ import { Navigation } from "swiper/modules";
 
 const events = [
   {
-    title: "Speaking Engagement – Maumee, OH",
+    title: "Recent Speaking Engagement – Maumee, OH",
     date: "August 17, 2025",
     place: "St. Paul's Lutheran Church",
     blurb: "10:30 AM",
