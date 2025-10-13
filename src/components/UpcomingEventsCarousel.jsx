@@ -5,10 +5,10 @@ import { Navigation } from "swiper/modules";
 
 const events = [
   {
-    title: "Recent Speaking Engagement – Maumee, OH",
-    date: "August 17, 2025",
-    place: "St. Paul's Lutheran Church",
-    blurb: "10:30 AM",
+    title: "Recent Speaking Engagement ",
+    date: "August 2025",
+    place: "St. Paul's – Maumee, OH",
+    // blurb: "10:30 AM",
     videos: [
       "https://res.cloudinary.com/dzofduj2h/video/upload/v1759444840/video1_fmo9kw.mp4",
       "https://res.cloudinary.com/dzofduj2h/video/upload/v1759444558/video2_o1apiw.mp4",
@@ -39,8 +39,9 @@ export default function UpcomingEventsCarousel() {
               <h3 className="text-2xl font-semibold text-white mb-2">
                 {ev.title}
               </h3>
-              <p className="text-gray-300 mb-1">📅 {ev.date}</p>
+              
               <p className="text-gray-300 mb-3">📍 {ev.place}</p>
+              <p className="text-gray-300 mb-1">📅 {ev.date}</p>
               <p className="text-gray-200 italic">{ev.blurb}</p>
 
               {/* Local Videos */}
