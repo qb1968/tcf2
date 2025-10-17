@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import ImageCard from "../components/ImageCard";
@@ -6,7 +6,16 @@ import ImageContainer from "../components/ImageContainer";
 import UpcomingEventsCarousel from "../components/UpcomingEventsCarousel";
 
 export default function Home() {
-  const [expanded,setExpanded] = useState(false)
+  const [expanded, setExpanded] = useState(false);
+  const sectionRef = useRef(null);
+
+  const handleToggle = () => {
+    if (expanded && sectionRef.current) {
+      // Scroll smoothly to top of section when collapsing
+      sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setExpanded(!expanded);
+  };
   return (
     <section id="home" className="max-w-7xl mx-auto font-custom text-gray-800 ">
       {/* Hero Section */}
@@ -34,9 +43,10 @@ export default function Home() {
 
       {/* Press Release Section */}
       <section
-        className="bg-white py-16 px-6 max-w-5xl mx-auto my-16 rounded-3xl shadow-lg border border-gray-200 "
+        ref={sectionRef}
+        className="bg-white py-16 px-6 max-w-5xl mx-auto my-16 rounded-3xl shadow-lg border border-gray-200"
         style={{
-          boxShadow: "0 0 30px rgba(59, 130, 246, 0.5)", // Tailwind blue-500 glow
+          boxShadow: "0 0 30px rgba(59, 130, 246, 0.5)", // bluish glow
         }}
       >
         <div className="text-center mb-8">
@@ -163,10 +173,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Read More Button */}
+        {/* Read More / Read Less Button */}
         <div className="flex justify-center mt-6">
           <button
-            onClick={() => setExpanded(!expanded)}
+            onClick={handleToggle}
             className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition"
           >
             {expanded ? "Read Less ←" : "Read More →"}
