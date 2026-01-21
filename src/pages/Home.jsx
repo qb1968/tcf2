@@ -205,7 +205,7 @@ export default function Home() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Promotion 1 */}
-          <div
+          {/* <div
             className="bg-white border border-gray-200 rounded-xl p-6 shadow-md hover:shadow-lg transition"
             data-aos="fade-up"
           >
@@ -224,7 +224,7 @@ export default function Home() {
             >
               Claim Offer
             </HashLink>
-          </div>
+          </div> */}
 
           {/* Promotion 2 */}
           <div
