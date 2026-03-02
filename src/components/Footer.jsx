@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { FaLinkedin, FaFacebookF, FaYoutube } from "react-icons/fa"; // Import LinkedIn, Facebook, YouTube
+import { FaLinkedin, FaFacebookF, FaYoutube, FaTiktok } from "react-icons/fa"; // Import LinkedIn, Facebook, YouTube
 
 const Footer = () => {
   return (
@@ -70,6 +70,15 @@ const Footer = () => {
             aria-label="YouTube"
           >
             <FaYoutube />
+          </a>
+          <a
+            href="https://www.tiktok.com/@imperfecthappines?is_from_webapp=1&sender_device=pc" // replace with your YT link
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition text-2xl"
+            aria-label="TikTok"
+          >
+            <FaTiktok />
           </a>
         </div>
       </div>
