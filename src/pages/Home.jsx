@@ -213,7 +213,7 @@ export default function Home() {
               <span className="font-extrabold">FREE</span> SHIPPING
             </h3>
             <p className="text-gray-600 mb-4">
-              Purchase a book through March 31, 2026 and receive free
+              Purchase a book through <br/>March 31, 2026 and receive free
               shipping! <br /> (U.S. orders only)
             </p>
             <HashLink
