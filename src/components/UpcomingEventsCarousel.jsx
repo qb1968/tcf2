@@ -10,10 +10,10 @@ const events = [
     place: "St. Paul's – Maumee, OH",
     // blurb: "10:30 AM",
     videos: [
-      "https://res.cloudinary.com/dzofduj2h/video/upload/v1759444840/video1_fmo9kw.mp4",
+      // "https://res.cloudinary.com/dzofduj2h/video/upload/v1759444840/video1_fmo9kw.mp4",
       "https://res.cloudinary.com/dzofduj2h/video/upload/v1759444558/video2_o1apiw.mp4",
-      "https://res.cloudinary.com/dzofduj2h/video/upload/v1759444835/video3_pjspum.mp4",
-      "https://res.cloudinary.com/dzofduj2h/video/upload/v1759444269/video4_pvvfkg.mp4",
+      // "https://res.cloudinary.com/dzofduj2h/video/upload/v1759444835/video3_pjspum.mp4",
+      // "https://res.cloudinary.com/dzofduj2h/video/upload/v1759444269/video4_pvvfkg.mp4",
       "https://res.cloudinary.com/dzofduj2h/video/upload/v1759444236/video5_sir79n.mp4",
     ],
   },
@@ -23,7 +23,7 @@ export default function UpcomingEventsCarousel() {
   return (
     <section className="py-16 px-4 bg-gray-900 text-white">
       <h2 className="text-3xl font-bold text-center mb-10">
-        Past & Upcoming Events
+         Events
       </h2>
 
       <Swiper

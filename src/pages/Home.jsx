@@ -37,9 +37,9 @@ export default function Home() {
       </div>
 
       {/* ImageContainer Section */}
-      <div className="px-6 pb-20">
+      {/* <div className="px-6 pb-20">
         <ImageContainer />
-      </div>
+      </div> */}
 
       {/* Press Release Section */}
       <section
@@ -77,26 +77,26 @@ export default function Home() {
             expanded ? "max-h-[5000px]" : "max-h-[160px]"
           }`}
         >
-          <p>
-            <span className="font-bold">Mebane, NC —</span>
-            (PR.com) “Imperfect Happiness: A Journey of Perfect Twists:
-            Thirty-Day Devotional to Living Life Well”: a thought-provoking
-            devotional designed to encourage readers to find purpose and
-            contentment through faith in Christ. “Imperfect Happiness: A Journey
-            of Perfect Twists: Thirty-Day Devotional to Living Life Well” is the
-            creation of published author, Terry C. Fleitz, a nationally
-            recognized speaker and seminar leader specializing in small-business
-            performance optimization, who has published over 100 articles on
-            business and leadership and co-authored the U.S. Government Small
-            Business Mobilization Planner. His book, Imperfect Happiness, is an
-            inspirational memoir that blends biblical principles, prayer,
-            Christian music, personal experiences, and lessons from his father’s
-            faith- filled legacy to encourage readers toward resilience,
-            contentment, and a Christ-centered life.
-          </p>
-
           {/* Hidden content */}
           <div className={`${expanded ? "block" : "hidden"} space-y-6`}>
+            <p>
+              <span className="font-bold">Mebane, NC —</span>
+              (PR.com) “Imperfect Happiness: A Journey of Perfect Twists:
+              Thirty-Day Devotional to Living Life Well”: a thought-provoking
+              devotional designed to encourage readers to find purpose and
+              contentment through faith in Christ. “Imperfect Happiness: A
+              Journey of Perfect Twists: Thirty-Day Devotional to Living Life
+              Well” is the creation of published author, Terry C. Fleitz, a
+              nationally recognized speaker and seminar leader specializing in
+              small-business performance optimization, who has published over
+              100 articles on business and leadership and co-authored the U.S.
+              Government Small Business Mobilization Planner. His book,
+              Imperfect Happiness, is an inspirational memoir that blends
+              biblical principles, prayer, Christian music, personal
+              experiences, and lessons from his father’s faith- filled legacy to
+              encourage readers toward resilience, contentment, and a
+              Christ-centered life.
+            </p>
             <p>
               Fleitz shares, “Based on true events, IMPERFECT HAPPINESS follows
               the author’s journey dreaming of business success as a teenager
@@ -205,7 +205,7 @@ export default function Home() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Promotion 1 */}
-          {/* <div
+          <div
             className="bg-white border border-gray-200 rounded-xl p-6 shadow-md hover:shadow-lg transition"
             data-aos="fade-up"
           >
@@ -213,7 +213,7 @@ export default function Home() {
               <span className="font-extrabold">FREE</span> SHIPPING
             </h3>
             <p className="text-gray-600 mb-4">
-              Purchase a book through December 14, 2025 and receive free
+              Purchase a book through March 31, 2026 and receive free
               shipping! <br /> (U.S. orders only)
             </p>
             <HashLink
@@ -224,7 +224,7 @@ export default function Home() {
             >
               Claim Offer
             </HashLink>
-          </div> */}
+          </div>
 
           {/* Promotion 2 */}
           <div
