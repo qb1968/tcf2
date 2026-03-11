@@ -53,6 +53,162 @@ export default function Home() {
           <p className="text-sm text-gray-500 uppercase tracking-widest font-semibold">
             Press Release
           </p>
+          <p className="text-sm text-gray-500">📅 January 2026</p>
+          <h2 className="text-4xl font-bold mt-2 text-gray-800 font-custom">
+            MUST READ
+            <div className="flex justify-center mt-4 gap-1 text-yellow-500">
+              <br />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="size-10"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="size-10"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="size-10"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="size-10"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="size-10"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+          </h2>
+          <br /> A 30-day Christian devotional on how God uses life’s
+          imperfections to shape faith, purpose, and fulfillment beyond success
+          <h3 className="text-2xl font semi-bold mt-10 text-gray-800 font-custom">
+            Happiness is imperfect on earth, but with God, it becomes
+            purposeful. We all face different kinds of troubles on this journey
+            called life, but in spite of all those trials and tribulations, God
+            can use those twists to shape character, deepen faith, and redirect
+            us toward what truly matters.
+          </h3>
+        </div>
+
+        {/* Collapsible Content */}
+        <div
+          className={`text-gray-700 leading-relaxed space-y-6 overflow-hidden transition-all duration-700 ${
+            expanded ? "max-h-[5000px]" : "max-h-[160px]"
+          }`}
+        >
+          {/* Hidden content */}
+          <div className={`${expanded ? "block" : "hidden"} space-y-6`}>
+            <p>
+              This is the premise of the faith-based devotional that is
+              Imperfect Happiness: A Journey of Perfect Twists - Thirty-Day
+              Devotional to Living Life Well. In this book, Terry C. Fleitz
+              presents a thirty-day journey in which he applies his personal
+              experiences, biblical teachings, leadership lessons, prayer, and
+              Christian music with the aim of showing readers how to live life
+              well with God at the center.
+            </p>
+            <p>
+              The author's ability to infuse his personal experiences
+              immediately stands out because he expertly presents himself as
+              someone who has lived through success, failure, illness, and
+              doubt, just like any other human, but learned from it. Having
+              grown up in a working-class family and becoming a successful adult
+              who achieved the American dream, he still did not achieve
+              fulfillment in his life, but two major health crises became
+              turning points for him on his journey toward developing real faith
+              and finding fulfillment. Readers will relate to several aspects of
+              his story, especially the areas where he got things wrong and
+              showed that faith is not about perfection.
+            </p>
+            <p>
+              The book is structured in an easy-to-follow and engaging way, with
+              each chapter introducing a life lesson and then supported by
+              scripture, prayer, traits of Jesus, and Christian music references
+              in addition to his personal experiences. Therefore, the book works
+              well as not just a devotional but also a life guide. Key concepts
+              from relationship building and Godly wisdom to kindness are
+              touched on in simple terms, and readers will learn a lot from
+              these areas. The inclusion of practical tools, such as "Pick
+              Five," "Twenty-One Steps to Being the Best Imperfect You," and the
+              “Pause and Reflect” sections, makes the lessons very easy to apply
+              in life as well.
+            </p>
+
+            <p>
+              Anyone who is searching for purpose beyond material gain should
+              pick up a copy of Imperfect Happiness. If you enjoy devotionals,
+              the book will also appeal to you. It is a great reminder and
+              reassurance of some of the important things in life, especially
+              when we inevitably go through pain, confusion, and imperfection.
+              God is always present with us, and putting Him at the center is
+              key.
+            </p>
+           
+          </div>
+        </div>
+
+        {/* Read More / Read Less Button */}
+        <div className="flex justify-center mt-6">
+          <button
+            onClick={handleToggle}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition"
+          >
+            {expanded ? "Read Less ←" : "Read More →"}
+          </button>
+        </div>
+      </section>
+      <section
+        ref={sectionRef}
+        className="bg-white py-16 px-6 max-w-5xl mx-auto my-16 rounded-3xl shadow-lg border border-gray-200"
+        style={{
+          boxShadow: "0 0 30px rgba(59, 130, 246, 0.5)", // bluish glow
+        }}
+      >
+        <div className="text-center mb-8">
+          <p className="text-sm text-gray-500 uppercase tracking-widest font-semibold">
+            Press Release
+          </p>
           <p className="text-sm text-gray-500">📅 October 2025</p>
           <h2 className="text-4xl font-bold mt-2 text-gray-800 font-custom">
             Terry C. Fleitz’s Newly Released
@@ -213,8 +369,9 @@ export default function Home() {
               <span className="font-extrabold">FREE</span> SHIPPING
             </h3>
             <p className="text-gray-600 mb-4">
-              Purchase a book through <br/>March 31, 2026 and receive free
-              shipping! <br /> (U.S. orders only)
+              Purchase a book through <br />
+              March 31, 2026 and receive free shipping! <br /> (U.S. orders
+              only)
             </p>
             <HashLink
               smooth
