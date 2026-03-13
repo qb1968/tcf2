@@ -79,7 +79,7 @@ export default function Home() {
       >
         <div className="text-center mb-8">
           <p className="text-sm text-gray-500 uppercase tracking-widest font-semibold">
-            Press Release
+            Book Review 
           </p>
           <p className="text-sm text-gray-500">📅 January 2026</p>
           <h2 className="text-4xl font-bold mt-2 text-gray-800 font-custom">
@@ -238,7 +238,7 @@ export default function Home() {
       >
         <div className="text-center mb-8">
           <p className="text-sm text-gray-500 uppercase tracking-widest font-semibold">
-            Press Release
+            Book Review 
           </p>
           <p className="text-sm text-gray-500">📅 November 2025</p>
           <h2 className="text-4xl font-bold mt-2 text-gray-800 font-custom">
