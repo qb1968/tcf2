@@ -6,15 +6,43 @@ import ImageContainer from "../components/ImageContainer";
 import UpcomingEventsCarousel from "../components/UpcomingEventsCarousel";
 
 export default function Home() {
-  const [expanded, setExpanded] = useState(false);
-  const sectionRef = useRef(null);
+  const [expanded1, setExpanded1] = useState(false);
+  const [expanded2, setExpanded2] = useState(false);
+  const [expanded3, setExpanded3] = useState(false);
+  const sectionRef1 = useRef(null);
+  const sectionRef2 = useRef(null);
+  const sectionRef3 = useRef(null);
 
-  const handleToggle = () => {
-    if (expanded && sectionRef.current) {
-      // Scroll smoothly to top of section when collapsing
-      sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  const handleToggle = (section) => {
+    if (section === 1) {
+      if (expanded1 && sectionRef1.current) {
+        sectionRef1.current.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+      setExpanded1(!expanded1);
     }
-    setExpanded(!expanded);
+
+    if (section === 2) {
+      if (expanded2 && sectionRef2.current) {
+        sectionRef2.current.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+      setExpanded2(!expanded2);
+    }
+
+    if (section === 3) {
+      if (expanded3 && sectionRef3.current) {
+        sectionRef3.current.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+      setExpanded3(!expanded3);
+    }
   };
   return (
     <section id="home" className="max-w-7xl mx-auto font-custom text-gray-800 ">
@@ -43,7 +71,7 @@ export default function Home() {
 
       {/* Press Release Section */}
       <section
-        ref={sectionRef}
+        ref={sectionRef1}
         className="bg-white py-16 px-6 max-w-5xl mx-auto my-16 rounded-3xl shadow-lg border border-gray-200"
         style={{
           boxShadow: "0 0 30px rgba(59, 130, 246, 0.5)", // bluish glow
@@ -120,8 +148,11 @@ export default function Home() {
               </svg>
             </div>
           </h2>
-          <br /> A 30-day Christian devotional on how God uses life’s
-          imperfections to shape faith, purpose, and fulfillment beyond success
+          <h2 className="text-4xl font-bold mt-2 text-gray-800 font-custom">
+            {" "}
+            A 30-day Christian devotional on how God uses life’s imperfections
+            to shape faith, purpose, and fulfillment beyond success
+          </h2>
           <h3 className="text-2xl font semi-bold mt-10 text-gray-800 font-custom">
             Happiness is imperfect on earth, but with God, it becomes
             purposeful. We all face different kinds of troubles on this journey
@@ -134,11 +165,11 @@ export default function Home() {
         {/* Collapsible Content */}
         <div
           className={`text-gray-700 leading-relaxed space-y-6 overflow-hidden transition-all duration-700 ${
-            expanded ? "max-h-[5000px]" : "max-h-[160px]"
+            expanded1 ? "max-h-[5000px]" : "max-h-[160px]"
           }`}
         >
           {/* Hidden content */}
-          <div className={`${expanded ? "block" : "hidden"} space-y-6`}>
+          <div className={`${expanded1 ? "block" : "hidden"} space-y-6`}>
             <p>
               This is the premise of the faith-based devotional that is
               Imperfect Happiness: A Journey of Perfect Twists - Thirty-Day
@@ -184,22 +215,150 @@ export default function Home() {
               God is always present with us, and putting Him at the center is
               key.
             </p>
-           
           </div>
         </div>
 
         {/* Read More / Read Less Button */}
         <div className="flex justify-center mt-6">
           <button
-            onClick={handleToggle}
+            onClick={() => handleToggle(1)}
             className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition"
           >
-            {expanded ? "Read Less ←" : "Read More →"}
+            {expanded1 ? "Read Less ←" : "Read More →"}
           </button>
         </div>
       </section>
+
       <section
-        ref={sectionRef}
+        ref={sectionRef3}
+        className="bg-white py-16 px-6 max-w-5xl mx-auto my-16 rounded-3xl shadow-lg border border-gray-200"
+        style={{
+          boxShadow: "0 0 30px rgba(59, 130, 246, 0.5)", // bluish glow
+        }}
+      >
+        <div className="text-center mb-8">
+          <p className="text-sm text-gray-500 uppercase tracking-widest font-semibold">
+            Press Release
+          </p>
+          <p className="text-sm text-gray-500">📅 November 2025</p>
+          <h2 className="text-4xl font-bold mt-2 text-gray-800 font-custom">
+            Imperfect Happiness is rich with scriptural references, which makes
+            it feel meditative and authentic, with a sense of spiritual intimacy
+            that draws the reader inward.
+          </h2>
+          <h3 className="text-2xl font semi-bold mt-10 text-gray-800 font-custom">
+            “Imperfect Happiness: A Journey of Perfect Twists – Thirty-Day
+            Devotional to Living Life Well” by Terry C. Fleitz is an inspiring
+            Christian devotional that aims to inform and help readers navigate
+            various challenges and thus be able to live in the best way
+            possible, with a strong sense of purpose, wisdom, positivity, and
+            faith.
+          </h3>
+        </div>
+
+        {/* Collapsible Content */}
+        <div
+          className={`text-gray-700 leading-relaxed space-y-6 overflow-hidden transition-all duration-700 ${
+            expanded3 ? "max-h-[5000px]" : "max-h-[160px]"
+          }`}
+        >
+          {/* Hidden content */}
+          <div className={`${expanded3 ? "block" : "hidden"} space-y-6`}>
+            <p>
+              <span className="font-bold">Reviewed by Lily Andrews</span>
+              “Imperfect Happiness: A Journey of Perfect Twists – Thirty-Day
+              Devotional to Living Life Well” by Terry C. Fleitz is an inspiring
+              Christian devotional that aims to inform and help readers navigate
+              various challenges and thus be able to live in the best way
+              possible, with a strong sense of purpose, wisdom, positivity, and
+              faith.
+            </p>
+            <p>
+              Fleitz begins with a childhood memory. He remembers his
+              sixth-grade teacher, Sister Magdalene, explaining what would, in
+              years to come, become a strong basis for his understanding of
+              integrity. She was the first person from outside the home to
+              challenge him to think seriously about right and wrong, and also
+              to see moral choices as deliberate acts rather than automatic
+              responses. His parents were, of course, the first ones to instill
+              in him a sense of honesty, hard work, and compassion. This they
+              did, not through stern lectures but through deliberate behavior
+              and choices. Over time, he would come to discover several
+              life-changing truths. They include: living the best life is
+              directly connected to building a closer relationship with God,
+              that true success cannot be measured by material gain or social
+              status, and that the depth of one’s faith and the sincerity of
+              their relationships is directly tied to a lasting sense of joy,
+              peace, and fulfilment.
+            </p>
+            <p>
+              As you read through this book, you can’t fail to notice Fleitz’s
+              use of metaphors and imagery to communicate certain truths in more
+              depth. They include “From the Ocean to the Mountain,” a real
+              transition that he uses to describe two contrasting stages in his
+              life’s journey, “The Organization” which apart from being a
+              physical place, dramatizes general worldly success and moral
+              compromise, “The Desert,” which represents a state of burnout and
+              spiritual emptiness that follows overwork and misplaced ambition,
+              and “The Room of Shame,” a metaphor that illustrates the inner
+              chamber of conscience, that is, the place within oneself that
+              holds guilt and regret. These, among others, beautifully and
+              profoundly create a literary structure that mirrors his message,
+              each marking a stage in the reader’s heart as they learn to live
+              well.
+            </p>
+
+            <p>
+              This book is rich with scriptural references, especially verses
+              from the Book of Psalms. This rich incorporation makes it feel
+              meditative and authentic, with a sense of spiritual intimacy that
+              draws the reader inward. It has the advantage of combining a
+              devotional sense with memoir, in that the author can merge
+              experience with reflection, grounding his words in a realism
+              readers can relate to and, maybe, learn from. Talking of
+              structure, this book is complex, but in a good way. Every chapter
+              has a “Pause and Reflect” section that feels intentionally placed
+              to interrupt the narrative flow and shift the reader’s attention
+              to self-examination. Additionally, the structure shifts between
+              narrative, to prayer and song, in a multi-layered design that is a
+              show of clever craftsmanship and a form of artistic control.
+              Readers will agree that this style of writing is unique and helps
+              prevent the text from becoming monotonous.
+            </p>
+            <p>
+              “Imperfect Happiness: A Journey of Perfect Twists – Thirty-Day
+              Devotional to Living Life Well” by Terry C. Fleitz is a book that
+              needs to be studied with a pen and a notebook, owing to its depth,
+              density, and reflective nature. This study’s approach is also
+              likely to move the reader from passive observation to active
+              participation. Readers seeking meaning beyond material success, as
+              well as those who have spent years chasing achievement, will
+              deeply identify more with Fleitz’s experiences and discoveries.
+              Additionally, those who have faced illness or loss will find
+              genuine comfort in his honest retellings, which do not
+              sensationalize suffering but rather treat it as a teacher that
+              often helps draw meaning from even the darkest experiences. This
+              is an essential read that intelligently reveals just how adversity
+              can be redemptive and how faith can transform pain into purpose,
+              despair into growth, and hardship into spiritual renewal.
+              Excellent work, Terry Fleitz!
+            </p>
+          </div>
+        </div>
+
+        {/* Read More / Read Less Button */}
+        <div className="flex justify-center mt-6">
+          <button
+            onClick={() => handleToggle(3)}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition"
+          >
+            {expanded3 ? "Read Less ←" : "Read More →"}
+          </button>
+        </div>
+      </section>
+
+      <section
+        ref={sectionRef2}
         className="bg-white py-16 px-6 max-w-5xl mx-auto my-16 rounded-3xl shadow-lg border border-gray-200"
         style={{
           boxShadow: "0 0 30px rgba(59, 130, 246, 0.5)", // bluish glow
@@ -230,11 +389,11 @@ export default function Home() {
         {/* Collapsible Content */}
         <div
           className={`text-gray-700 leading-relaxed space-y-6 overflow-hidden transition-all duration-700 ${
-            expanded ? "max-h-[5000px]" : "max-h-[160px]"
+            expanded2 ? "max-h-[5000px]" : "max-h-[160px]"
           }`}
         >
           {/* Hidden content */}
-          <div className={`${expanded ? "block" : "hidden"} space-y-6`}>
+          <div className={`${expanded2 ? "block" : "hidden"} space-y-6`}>
             <p>
               <span className="font-bold">Mebane, NC —</span>
               (PR.com) “Imperfect Happiness: A Journey of Perfect Twists:
@@ -332,10 +491,10 @@ export default function Home() {
         {/* Read More / Read Less Button */}
         <div className="flex justify-center mt-6">
           <button
-            onClick={handleToggle}
+            onClick={() => handleToggle(2)}
             className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition"
           >
-            {expanded ? "Read Less ←" : "Read More →"}
+            {expanded2 ? "Read Less ←" : "Read More →"}
           </button>
         </div>
       </section>
